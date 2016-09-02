@@ -21,7 +21,8 @@ export class Layout extends React.Component{
   render(){
     return(
       <div>
-        <h2>React Locale</h2>
+        <h2>React CLDR Locale Exercise Problem</h2>
+        <a className="source-link" href="https://github.com/mariesajan/react-cldr-locale">Source Code</a>
         <Content data={this.state.data} />
       </div>
     );
