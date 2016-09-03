@@ -1,6 +1,25 @@
 ### React CLDR Locale Exercise Problem
 
-#### Demo
+#### Installation
+
+1. Clone the repository
+    ```
+    $ git clone git@github.com:mariesajan/react-cldr-locale.git
+    ```
+    
+2. Install dependencies
+   ```
+   $ npm install
+   ```
+
+3. Run
+   ```
+   $ npm start
+   ```
+
+4. Open the browser at [http://localhost:3000](http://localhost:3000)
+
+#### Demo on Heroku
 [Demo](https://react-cldr-locale.herokuapp.com/)
 
 #### Requirements
