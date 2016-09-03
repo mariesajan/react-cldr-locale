@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import $ from 'jquery';
 import Result from "./result";
+import PropertyList from "./property_list";
 
 export class Layout extends React.Component{
   constructor(props){
@@ -37,25 +38,22 @@ export class Content extends React.Component{
     super(props);
     this.state= {property: ''};
   }
-  handleClick(e){
-    let property = document.getElementById('txt_property').value;
+  handleChange(property){
     this.setState({property: property});
   }
   render(){
     const { property } = this.state;
     const { data } = this.props;
-    let allProps;
+    let keys;
     if(!data){
-      allProps = "";
+      keys = null;
     }else{
-      allProps = Object.keys(data).toString();
+      keys = Object.keys(data);
     }
     return (
       <div>
-        <div>{allProps}</div>
-        <label> Enter the property  : </label>
-        <input id="txt_property" />
-        <button onClick={this.handleClick.bind(this)}>Find</button>
+        <label>Select the property: </label>
+        <PropertyList data={keys} onChange={this.handleChange.bind(this)} />
         <Result property={property} data={data} />
       </div>
     );
