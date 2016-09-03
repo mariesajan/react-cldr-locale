@@ -1,10 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  context: __dirname,
   entry: './app/jsx/main.jsx',
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['', '.js', '.jsx']
   },
   devtool: 'source-map',
   module: {
@@ -13,17 +12,13 @@ module.exports = {
       loader: 'babel-loader',
       exclude: /node_modules/,
       query: {
-        presets: ['es2015', 'react', 'stage-0'],
+        presets: ['react', 'es2015', 'stage-0'],
         plugins: ['react-html-attrs']
       }
-    }, {
-      test: /\.json$/,
-      loader: 'json-loader',
-      exclude: /node_modules/,
     }]
   },
   output: {
-    path: path.join(__dirname, 'app', 'public'),
+    path: path.join('app', 'public'),
     filename: 'bundle.js'
   }
 };

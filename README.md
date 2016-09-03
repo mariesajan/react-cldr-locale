@@ -1,5 +1,8 @@
 ### React CLDR Locale Exercise Problem
 
+#### Demo
+[Demo](https://react-cldr-locale.herokuapp.com/)
+
 #### Requirements
 Using React.js and Node.js, create a Single Page Application that will return the values for a property for each locale
 
